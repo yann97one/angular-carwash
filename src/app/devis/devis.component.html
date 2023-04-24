@@ -1,0 +1,77 @@
+
+
+
+<div class="container">
+    <form>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="Nom" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}">
+            <label for="floatingPassword">Nom</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="prénom" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}">
+            <label for="floatingPassword">Prénom</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="adresse" [(ngModel)]="adresse" [ngModelOptions]="{standalone: true}">
+            <label for="floatingPassword">Adresse</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="number" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="tel" [ngModelOptions]="{standalone: true}">
+            <label for="floatingPassword">Téléphone</label>
+
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"(change)="verifMail()" [(ngModel)]="mail" [ngModelOptions]="{standalone: true}">
+            <label for="floatingInput">Email</label>
+            
+               <p *ngIf="!verifMail()" style="color:red">Veuillez entrer un mail valide !</p> 
+              
+        </div>
+
+        <div class="form-floating">
+            <input type="number" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}">
+            <label for="floatingPassword">Quantité</label>
+
+        </div>
+
+        
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Faire un choix</mat-label>
+            <select matNativeControl (change)="onOptionSelected()" [(ngModel)]="option" [ngModelOptions]="{standalone: true}">
+                >
+                <option #products>Produits</option>
+                <option #presta>Prestations</option>
+            </select>
+        </mat-form-field>
+
+       
+
+        <div class="form-floating" *ngIf="showPrestation=== 'presta'">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" [(ngModel)]="clientPresta" (change)="onPrestaSelected($event)" [ngModelOptions]="{standalone: true}">
+              <option selected>Choisir votre prestation</option>
+              <option value="1" *ngFor="let item of presta_tab"  value="{{item.id}}">{{item.nom}}</option>
+            </select>
+            <label for="floatingSelect">prestations</label>
+          </div>
+
+          <div class="form-floating" *ngIf="showPrestation === 'product'">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" (change)=" onProductSelected($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="clientProduct">
+              <option selected>Choisir votre produit</option>
+              <option value="1" *ngFor="let item of product_tab" value="{{item.id}}">{{item.nom}}</option>
+
+            </select>
+            <label for="floatingSelect">produits</label>
+          </div>
+       
+        <div class="error" *ngIf="!verifField()">
+            <h2  >Veuillez remplir tout le formulaire !</h2>
+        </div>
+
+        <div class="btnContainer">
+            <button mat-raised-button (click)="downLoadPDF()" *ngIf="verifField()">Générer le devis</button>
+        </div>
+    </form>
+</div>

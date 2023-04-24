@@ -1,0 +1,19 @@
+<a routerLink="product">
+      <h2>Nos produits</h2>
+
+</a>
+       
+
+<div class="card-container">
+    <div class="card" style="width: 18rem;" *ngFor="let item of dataSource">
+        <img src="{{item.img_src}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">{{item.nom}}</h3>
+          <p class="card-text">{{item.caracteristique}}</p>
+          <div class="price">
+            <p class="card-text">{{item.prix}} €</p>
+          </div>
+        </div>
+      </div>
+
+</div>

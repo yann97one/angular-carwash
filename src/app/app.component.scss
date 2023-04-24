@@ -1,0 +1,47 @@
+// Couleurs
+$couleur-principale: #7fb3d5;
+$couleur-texte: #ffffff;
+$couleur-fond: #000000;
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+}
+
+.navbar{
+  background: $couleur-principale;
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+  position: sticky;
+  .collapse{
+    ul{
+      li{
+        margin-left: 50px;
+      }
+    }
+  }
+  .container-fluid{
+    img{
+      width: 70px;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+footer{
+  bottom: 0;
+  position: absolute;
+}
+
+.spinner{
+  display: none;
+  .visible{
+    display: block;
+  }
+}

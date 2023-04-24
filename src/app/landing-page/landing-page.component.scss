@@ -1,0 +1,32 @@
+.header {
+    .video-container {
+        video {
+            width: 100%;
+        }
+    }
+}
+
+.container {
+
+
+ 
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+
+    .card {
+
+        margin-bottom: 20px;
+    }
+
+    .bgImage{
+        margin-top: 15px;
+        align-self: center;
+        width: 50em;
+    }
+
+
+}

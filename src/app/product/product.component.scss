@@ -1,0 +1,57 @@
+// table{
+//     border: 1px black solid;
+//     td{
+//         border: 1px black solid;
+       
+//     }
+// }
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+        text-decoration: underline;
+        font-weight: bold;
+        color: #7fb3d5;
+    }
+}
+
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        opacity: 0;
+        transform: translate(0, 10vh);
+        transition: all 1s;
+      }
+
+
+    .card {
+
+        margin-bottom: 20px;
+    }
+
+    .bgImage{
+        margin-top: 15px;
+        align-self: center;
+        width: 50em;
+    }
+
+
+    .visible{
+        z-index: -1;
+        opacity: 1;
+        transform: translate(0, 0);
+        position: relative;
+    }
+
+    .price{
+        p{
+            font-weight: bold;
+        }
+    }
+
+

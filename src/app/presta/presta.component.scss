@@ -14,9 +14,10 @@ a{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
-        opacity: 0;
         transform: translate(0, 10vh);
         transition: all 1s;
+        margin-left: 5%;
+
         
         
         

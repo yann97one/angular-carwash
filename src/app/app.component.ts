@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,10 +8,7 @@ export class AppComponent implements OnInit {
   title = 'devis_angular';
 
   ngOnInit(): void {
-      window.addEventListener("load", function(){
-        const loader  = $('mat-spinner');
-        loader.addClass('.visible');
-      })
+     
   }
   
 }

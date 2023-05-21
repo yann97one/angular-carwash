@@ -98,16 +98,13 @@ export class DevisComponent implements OnInit, AfterViewInit {
    * 
    * @param event correspond à l'evenement lorsque l'utilisateur selectionne un produit dans la liste déroulante
    */
-  onProductSelected(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    const selected = target.value;
+  onProductSelected(event: any) {
 
+    const selected = event;
     const productId = this.product_tab.find(product => selected == product.id);
-
     if (productId) {
-      this.clientProduct = productId;
+        this.clientProduct = productId;
     }
-
     console.log(this.clientProduct);
   }
 

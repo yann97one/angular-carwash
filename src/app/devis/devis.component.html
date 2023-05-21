@@ -50,7 +50,7 @@
        
 
         <div class="form-floating" *ngIf="showPrestation=== 'presta'">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" [(ngModel)]="clientPresta" (change)="onPrestaSelected($event)" [ngModelOptions]="{standalone: true}">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" [(ngModel)]="clientPresta" (ngModelChange)="onPrestaSelected($event)" [ngModelOptions]="{standalone: true}">
               <option selected>Choisir votre prestation</option>
               <option value="1" *ngFor="let item of presta_tab"  value="{{item.id}}">{{item.nom}}</option>
             </select>
@@ -58,7 +58,7 @@
           </div>
 
           <div class="form-floating" *ngIf="showPrestation === 'product'">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" (change)=" onProductSelected($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="clientProduct">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" (ngModelChange)=" onProductSelected($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="clientProduct">
               <option selected>Choisir votre produit</option>
               <option value="1" *ngFor="let item of product_tab" value="{{item.id}}">{{item.nom}}</option>
 

@@ -10,6 +10,7 @@ import { ApiServiceService, Prestation } from '../api-service.service';
 
 
 export class ProductComponent implements OnInit {
+  itemId!:string;
   cols: string[] = [
     'nom',
     'caractéristiques',
@@ -38,10 +39,11 @@ export class ProductComponent implements OnInit {
    
   }
 
-  callBack(json:Prestation){
-    
+  addToBasket(id:string){
+       id = this.itemId;
+      const basket = localStorage.setItem(id,'basket');
+      
 
-    
   }
 
   

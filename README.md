@@ -1,3 +1,30 @@
+
+# Cas d'utilisation : Gestion du Catalogue et Devis de lavage de voiture
+
+## Utilisateur
+- Visualiser un catalogue de produits et prestations pour le lavage de voiture
+- Remplir un formulaire de devis
+- Consulter les détails d'un produit ou d'une prestation
+
+## Génération de Devis
+- Générer automatiquement un devis en fonction des choix de l'utilisateur
+
+##
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # DevisAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.

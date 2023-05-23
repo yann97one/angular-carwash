@@ -76,9 +76,8 @@ export class DevisComponent implements OnInit, AfterViewInit {
    * 
    * @param event correspond à l'evenement lorsque l'utilisateur selectionne une prestation dans la liste déroulante
    */
-  onPrestaSelected(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    const selected = target.value;
+  onPrestaSelected(event: any) {
+    const selected = event;
 
     const prestaId = this.presta_tab.find(presta => selected == presta.id);
 
